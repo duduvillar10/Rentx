@@ -9,5 +9,11 @@ export function createCourse (request: Request, response:Response){
         duration: 10
     });
 
+    CreateCouseService.execute({
+        name: "Reactjs",
+        educator: "Julin"
+
+    });
+
     return response.send();
 }
