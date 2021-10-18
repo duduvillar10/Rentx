@@ -8,11 +8,8 @@ class CreateCategoryController {
     const { name, description } = request.body;
 
     const createCategoryUseCase = container.resolve(CreateCategoryUseCase);
-    try {
-      await createCategoryUseCase.execute({ name, description });
-    } catch (e) {
-      return response.status(401).send(e);
-    }
+
+    await createCategoryUseCase.execute({ name, description });
 
     return response.status(201).send();
   }
