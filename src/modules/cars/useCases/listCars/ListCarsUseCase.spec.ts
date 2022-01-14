@@ -42,8 +42,6 @@ describe('List Cars', () => {
       brand: 'Car_brand_test',
     });
 
-    console.log(cars);
-
     expect(cars).toEqual([car]);
   });
 });
