@@ -41,6 +41,10 @@ class CarsRepository implements ICarsRepository {
 
     return car;
   }
+
+  findAvailable(): Promise<Car[]> {
+    return this.repository.find();
+  }
 }
 
 export { CarsRepository };
