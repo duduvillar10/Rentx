@@ -12,10 +12,15 @@ describe('Create Rental', () => {
   });
 
   it('should be able to create a new rental', async () => {
-    await createRentalUseCase.execute({
+    const rental = await createRentalUseCase.execute({
       user_id: '12345',
       car_id: '121212',
       expected_return_date: new Date(),
     });
+
+    console.log(rental);
+
+    expect(rental).toHaveProperty('id');
+    expect(rental).toHaveProperty('start_date');
   });
 });
