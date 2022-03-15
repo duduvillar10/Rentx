@@ -14,7 +14,9 @@ services:
     volumes: 
       - pgdata:/data/postgres
   app:
-    build: .
+    build: 
+      context: .
+      dockerfile: DockerFile
     container_name: typescript
     ports:
       - 3333:3333
