@@ -24,6 +24,7 @@ class UsersTokensRepository implements IUsersTokensRepository {
 
     return userToken;
   }
+
   async findByUserIdAndRefreshToken(
     user_id: string,
     refresh_token: string,
