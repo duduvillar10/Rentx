@@ -1,10 +1,11 @@
+import { hash } from 'bcryptjs';
+import { inject, injectable } from 'tsyringe';
+
 import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
 import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTokensRepository';
 import { IDateProvider } from '@shared/container/providers/DateProvider/IDateProvider';
 import { AppError } from '@shared/errors/AppError';
-import { hash } from 'bcrypt';
-import { inject, injectable } from 'tsyringe';
-import { HighlightSpanKind } from 'typescript';
+
 interface IRequest {
   token: string;
   password: string;
