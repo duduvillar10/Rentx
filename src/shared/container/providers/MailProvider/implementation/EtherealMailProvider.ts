@@ -1,8 +1,9 @@
-import { inject, injectable } from 'tsyringe';
-import { IMailProvider } from '../IMailProvider';
-import nodemailer, { Transporter } from 'nodemailer';
-import handlebars from 'handlebars';
 import fs from 'fs';
+import handlebars from 'handlebars';
+import nodemailer, { Transporter } from 'nodemailer';
+import { inject, injectable } from 'tsyringe';
+
+import { IMailProvider } from '../IMailProvider';
 
 @injectable()
 class EtherealMailProvider implements IMailProvider {
